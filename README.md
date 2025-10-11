@@ -1,6 +1,7 @@
 # Solvle - A Word Puzzle Analysis Tool
 
-Try it out at http://solvle.appsoil.com
+Notice: Sorry, Solvle is no longer being actively hosted. It's not the most efficient tool to host and I decided
+to stop paying for AWS to host it. Thanks for those handful of people who contacted me about it in the past!
 
 This is a toy project that I made to learn React. It's the first React app I've written, 
 and its initial shell borrows heavily from the Wordle-Clone-React tutorial, available on github:
