@@ -1,18 +1,18 @@
-# Use the Eclipse temurin alpine official image
+# Use the Eclipse Temurin (OpenJDK) Alpine official image
 # https://hub.docker.com/_/eclipse-temurin
 FROM eclipse-temurin:21-jdk-alpine
 
-# Create and change to the app directory.
+# Install Maven
+RUN apk add --no-cache maven
+
+# Create and set the working directory
 WORKDIR /app
 
-# Copy local code to the container image.
+# Copy all project files into the container
 COPY . ./
 
-# Make the Maven wrapper executable (critical for Railway)
-RUN chmod +x mvnw
+# Build the app with Maven, skipping tests
+RUN mvn -B -DskipTests clean package
 
-# Build the app.
-RUN ./mvnw -DoutputFile=target/mvn-dependency-list.log -B -DskipTests clean dependency:list install
-
-# Run the app by dynamically finding the JAR file in the target directory
+# Run the built JAR file (dynamically finds the .jar in target/)
 CMD ["sh", "-c", "java -jar target/*.jar"]
