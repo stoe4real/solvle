@@ -8,6 +8,9 @@ WORKDIR /app
 # Copy local code to the container image.
 COPY . ./
 
+# Make the Maven wrapper executable (critical for Railway)
+RUN chmod +x mvnw
+
 # Build the app.
 RUN ./mvnw -DoutputFile=target/mvn-dependency-list.log -B -DskipTests clean dependency:list install
 
