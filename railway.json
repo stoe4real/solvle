@@ -1,0 +1,13 @@
+{
+  "build": {
+    "builder": "NIXPACKS"
+  },
+  "services": [
+    {
+      "name": "backend",
+      "root": "solvle-back",
+      "buildCommand": "./mvnw clean package -DskipTests",
+      "startCommand": "java -jar target/*.jar"
+    }
+  ]
+}
