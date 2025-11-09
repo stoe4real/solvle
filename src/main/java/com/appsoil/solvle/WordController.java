@@ -12,7 +12,7 @@ public class WordController {
 
     @GetMapping("/api/words")
     public List<String> getWordlist() {
-        String filePath = "dict/enable1.txt";  // Change to your main dict
+        String filePath = "dict/enable1.txt";  // Use your main dict file; change if needed
         try (BufferedReader reader = new BufferedReader(
                 new InputStreamReader(getClass().getClassLoader().getResourceAsStream(filePath)))) {
             return reader.lines()
@@ -20,7 +20,7 @@ public class WordController {
                     .filter(s -> !s.isEmpty())
                     .collect(Collectors.toList());
         } catch (Exception e) {
-            return List.of("ERROR"); // Debug fallback
+            return List.of("apple", "banana", "cherry");  // Fallback list if file not found
         }
     }
 }
