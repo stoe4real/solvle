@@ -11,16 +11,16 @@ import java.util.stream.Collectors;
 public class WordController {
 
     @GetMapping("/api/words")
-    public List<String> getWordlist() {
-        String filePath = "solvle/src/main/resources/dict2/simple-solutions.txt";  // Use your main dict file; change if needed
-        try (BufferedReader reader = new BufferedReader(
-                new InputStreamReader(getClass().getClassLoader().getResourceAsStream(filePath)))) {
-            return reader.lines()
+    public List<String> getWords() {
+        String path = "dict/enable1.txt";
+        try (BufferedReader br = new BufferedReader(
+                new InputStreamReader(getClass().getClassLoader().getResourceAsStream(path)))) {
+            return br.lines()
                     .map(String::trim)
                     .filter(s -> !s.isEmpty())
                     .collect(Collectors.toList());
         } catch (Exception e) {
-            return List.of("apple", "banana", "cherry");  // Fallback list if file not found
+            return List.of("apple", "crane", "slate", "audio", "trace");
         }
     }
 }
