@@ -20,7 +20,7 @@ public class WordController {
      */
     @GetMapping("/api/words")
     public Map<String, List<String>> getWordlist() {
-        String filePath = "dict2/enable1.txt";   // <-- correct folder
+        String filePath = "dict2/remaining-solutions.txt";   // <-- correct folder
 
         try (BufferedReader reader = new BufferedReader(
                 new InputStreamReader(
