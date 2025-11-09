@@ -1,5 +1,4 @@
 import React, {useContext} from 'react';
-import {MDBSwitch} from 'mdb-react-ui-kit';
 import AppContext from "../contexts/contexts";
 
 function Controls() {
