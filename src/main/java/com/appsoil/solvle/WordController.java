@@ -12,7 +12,7 @@ public class WordController {
 
     @GetMapping("/api/words")
     public List<String> getWordlist() {
-        String filePath = "dict2/simple-solutions.txt";  // Use your main dict file; change if needed
+        String filePath = "solvle/src/main/resources/dict2/simple-solutions.txt";  // Use your main dict file; change if needed
         try (BufferedReader reader = new BufferedReader(
                 new InputStreamReader(getClass().getClassLoader().getResourceAsStream(filePath)))) {
             return reader.lines()
