@@ -129,19 +129,19 @@ function Controls() {
             <hr/>
             <div>
                 <div title={hardModeHelpText}>
-                    <MDBSwitch id='hardModeSwitch' label="Hard Mode" name="hardMode"
+                    <input type="checkbox" id='hardModeSwitch' label="Hard Mode" name="hardMode"
                                defaultChecked={boardState.settings.hardMode} onChange={updateSetting}/>
                 </div>
                 <div title={requireAnswerHelpText}>
-                    <MDBSwitch id='requireAnswerSwitch' label="Only Use Potential Answers" name="requireAnswer"
+                    <input type="checkbox" id='requireAnswerSwitch' label="Only Use Potential Answers" name="requireAnswer"
                                defaultChecked={boardState.settings.requireAnswer} onChange={updateSetting}/>
                 </div>
                 <div title={rateEnteredWordsHelpText}>
-                    <MDBSwitch id='enableWordRatingSwitch' label="Rate Words As You Enter" name="rateEnteredWords"
+                    <input type="checkbox" id='enableWordRatingSwitch' label="Rate Words As You Enter" name="rateEnteredWords"
                                defaultChecked={boardState.settings.rateEnteredWords} onChange={updateSetting}/>
                 </div>
                 <div title={displayEntropyHelpText}>
-                    <MDBSwitch id='displayEntropySwitch' label="Display Entropy" name="displayEntropy"
+                    <input type="checkbox" id='displayEntropySwitch' label="Display Entropy" name="displayEntropy"
                                defaultChecked={boardState.settings.displayEntropy} onChange={updateSetting}/>
                 </div>
             </div>
