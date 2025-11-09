@@ -163,7 +163,7 @@ function TupleCompletion(props) {
                                           type="text" placeholder="Starting Word(s), separated by commas"/>
                         </Form.Group>
                         <div title="Limits multi-word guesses to potential solution words">
-                    <MDBSwitch id='requireAnswerSwitch' label="Only Use Potential Answers in Guess" name="requireAnswer"
+                    <input type="checkbox" id='requireAnswerSwitch' label="Only Use Potential Answers in Guess" name="requireAnswer"
                                defaultChecked={boardState.settings.requireAnswer} onChange={updateSetting}/>
                 </div>
                                                 <p><b>Remaining</b>: How many solutions are left on average after guessing all the words in each group (lower is better)</p>
