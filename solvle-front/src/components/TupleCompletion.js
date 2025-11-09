@@ -2,7 +2,6 @@ import React, {useContext, useEffect, useRef, useState} from 'react';
 import {Button, Form, Modal, ProgressBar, Spinner, Table} from "react-bootstrap";
 import AppContext from "../contexts/contexts";
 import {generateConfigParams} from "../functions/functions";
-import {MDBSwitch} from "mdb-react-ui-kit";
 
 function TupleCompletion(props) {
     const {
